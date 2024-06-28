@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn-apply {
+    @apply py-2 px-4 bg-red-600 text-white rounded-md font-semibold hover:bg-red-700 focus:outline-none shadow-sm;
+  }
+
+  /* Travel Card */
+  /* .travel-card {
+    @apply
+  } */
+  .card-img {
+    @apply object-cover object-center rounded-md h-72 w-full sm:h-64 sm:w-80;
+  }
+  /* .card-header {
+
+  } */
+  .card-body {
+    @apply py-2;
+  }
+  .card-body .card-infos {
+    @apply flex flex-wrap gap-x-3 text-sm text-gray-500 mb-3;
+  }
+  .card-body .card-title {
+    @apply font-medium text-xl mb-3;
+  }
+  /* .card-footer */
+}
